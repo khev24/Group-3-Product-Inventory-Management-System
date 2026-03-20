@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Inventory System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body class="auth-page">
+
+    <div class="auth-card">
+        <h2>📦 Inventory System</h2>
+        <p class="auth-subtitle">Sign in to your account</p>
+
+        <!-- Error box shown when login fails -->
+        <div id="loginError" class="error-box" style="display:none;"></div>
+
+        <div class="form-group">
+            <label>Username</label>
+            <input type="text" id="username" placeholder="Enter username">
+            <span class="field-error" id="usernameError"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" id="password" placeholder="Enter password">
+            <span class="field-error" id="passwordError"></span>
+        </div>
+
+        <button id="btnLogin" class="btn btn-primary">Login</button>
+
+        <p class="auth-link">Not yet registered? <a href="register.html">Register now</a></p>
+    </div>
+
+    <!-- Toast notification -->
+    <div id="toast" class="toast" style="display:none;"></div>
+
+    <script src="storage.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>

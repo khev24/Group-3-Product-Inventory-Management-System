@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Inventory System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body class="auth-page">
+
+    <div class="auth-card">
+        <h2>📦 Create Account</h2>
+        <p class="auth-subtitle">Register a new user</p>
+
+        <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" id="name" placeholder="Enter full name">
+            <span class="field-error" id="nameError"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Username</label>
+            <input type="text" id="username" placeholder="Enter username">
+            <span class="field-error" id="usernameError"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" id="password" placeholder="Enter password (min. 6 characters)">
+            <span class="field-error" id="passwordError"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Role</label>
+            <select id="selectRole">
+                <option value="">-- Select a role --</option>
+                <option value="Admin">Admin</option>
+                <option value="Staff">Staff</option>
+                <option value="Supplier">Supplier</option>
+            </select>
+            <span class="field-error" id="roleError"></span>
+        </div>
+
+        <button id="btnRegister" class="btn btn-primary">Register</button>
+
+        <p class="auth-link">Already registered? <a href="index.html">Go to Login</a></p>
+    </div>
+
+    <!-- Toast notification -->
+    <div id="toast" class="toast" style="display:none;"></div>
+
+    <script src="storage.js"></script>
+    <script src="User.js"></script>
+    <script src="Admin.js"></script>
+    <script src="Staff.js"></script>
+    <script src="Supplier.js"></script>
+    <script src="register.js"></script>
+</body>
+</html>
